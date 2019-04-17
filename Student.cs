@@ -3,19 +3,15 @@ using System.Collections.Generic;
 
 namespace myApp
 {
-    public class Student
+    public class Student : NSSPerson
     {
-        private string _firstName { get; set; }
-        private string _lastName { get; set; }
-        private string _slackHandle { get; set; }
-        private string _cohort { get; set; }
         public List<Exercise> Exercises = new List<Exercise>();
 
         public Student(string fName, string lName, string position)
         {
-            _firstName = fName;
-            _lastName = lName;
-            _slackHandle = position;
+            FirstName = fName;
+            LastName = lName;
+            SlackHandle = position;
         }
 
         public void SetAssignment(Exercise exercise)
@@ -24,19 +20,19 @@ namespace myApp
         }
 
         public void GetEnrolled(string taco) {
-            _cohort = taco;
+            Cohort = taco;
         }
 
         public string returnCohort(){
-            return _cohort;
+            return Cohort;
         }
 
         public string returnLastName(){
-            return _lastName;
+            return LastName;
         }
         public void Print()
         {
-            Console.WriteLine($@"{_firstName} {_lastName}:
+            Console.WriteLine($@"{FirstName} {LastName}:
             Exercises:");
 
             foreach (Exercise Exercise in Exercises)

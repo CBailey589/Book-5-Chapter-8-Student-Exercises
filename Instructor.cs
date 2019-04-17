@@ -3,18 +3,13 @@ using System.Collections.Generic;
 
 namespace myApp
 {
-    public class Instructor
+    public class Instructor : NSSPerson
     {
-        private string _firstName { get; set; }
-        private string _lastName { get; set; }
-        private string _slackHandle { get; set; }
-        private string _cohort { get; set; }
-
         public Instructor(string fName, string lName, string position)
         {
-            _firstName = fName;
-            _lastName = lName;
-            _slackHandle = position;
+            FirstName = fName;
+            LastName = lName;
+            SlackHandle = position;
         }
 
         public void Assign(Student student, Exercise exercise)
@@ -23,18 +18,18 @@ namespace myApp
         }
         public void GetEmployed(string taco)
         {
-            _cohort = taco;
+            Cohort = taco;
         }
 
         public string returnCohort()
         {
-            return _cohort;
+            return Cohort;
         }
 
 
         public void Print()
         {
-            Console.WriteLine($"{_firstName} {_lastName}");
+            Console.WriteLine($"{FirstName} {LastName}");
         }
 
     }

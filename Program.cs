@@ -134,7 +134,7 @@ namespace myApp
 
             // Which student is working on the most exercises? Make sure one of your students has more exercises than the others.
             List<Student> StudentsWithMostExercises = students2
-            .Where(st => st.Exercises.Count() == (students2.Max(stud=> stud.Exercises.Count())))
+            .Where(st => st.Exercises.Count() == (students2.Max(stud => stud.Exercises.Count())))
             .ToList();
             foreach (Student st in StudentsWithMostExercises)
             {
@@ -146,6 +146,9 @@ namespace myApp
             {
                 Console.WriteLine($"Cohort {co.returnName()} has {co.Students.Count()} students");
             }
+
+            // Student Exercises 3 *****************************************************************************************
+            
 
 
 
