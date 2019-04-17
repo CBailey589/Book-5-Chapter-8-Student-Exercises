@@ -14,6 +14,10 @@ namespace myApp
             _language = language;
         }
 
+        public string returnLang() {
+            return _language;
+        }
+
         public void Print()
         {
             Console.WriteLine($"Name: {_name}, Language: {_language} ");

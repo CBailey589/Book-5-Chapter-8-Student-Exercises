@@ -8,6 +8,7 @@ namespace myApp
         private string _firstName { get; set; }
         private string _lastName { get; set; }
         private string _slackHandle { get; set; }
+        private string _cohort { get; set; }
 
         public Instructor(string fName, string lName, string position)
         {
@@ -19,6 +20,15 @@ namespace myApp
         public void Assign(Student student, Exercise exercise)
         {
             student.SetAssignment(exercise);
+        }
+        public void GetEmployed(string taco)
+        {
+            _cohort = taco;
+        }
+
+        public string returnCohort()
+        {
+            return _cohort;
         }
 
 
